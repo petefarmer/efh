@@ -42,7 +42,7 @@ jj-tab = \relative c'' {
 
       % measure 14f,17u
       \bendOn
-      c8\3 e\2 g\2 \bendGrace b\2 (c8\2) b\2 ~ b4.\2 
+      c8\3 e\2 g\2 \bendGrace b\1 (c8\1) b\1 ~ b4.\1 
       \bendOff
      }
 % Fig. 2 end

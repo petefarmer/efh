@@ -40,7 +40,10 @@ jd-tab = \relative c'' {
 
       % measure 12f,
       \bendOn
-      gis4\4 gis16\4  c\3 cis8\3 \bendGrace cis8\3 (dis4\3) (cis8\3)  c8\3 
+      gis4\4 gis16\4  c\3 cis8\3 \bendGrace 
+%      \tweak NoteHead.bend-arrow-height #1
+      cis8\3 
+       (dis4\3 ) (cis8\3)  c8\3 
       \bendOff
 
       % measure 13f,

@@ -1,17 +1,17 @@
-JJNotes = \relative c'' {
-     \clef "treble_8"
+JJNotes = \relative c''' {
+     \clef "treble"
 %     \partial 8 r8
 % Fig. 1 begin
      {
       \repeat volta 2 {
 % measure 1,5f,1u
        \repeat percent 3 {
-       e16_\markup {\teeny \bold "Fig. 1"} ( dis e8 ) \staccato b16( ais b8) \staccato ais16 \( g ais ais \glissando (a) g e8 \staccato \)
+       e16->_\markup {\teeny \bold "Fig. 1"} dis e8  \staccato b16-> ais b8 \staccato ais16->  g ais ais-> \glissando (a) g e8 \staccato 
        }
       }
       \alternative {
      % measure 5f,4u
-       { e,,16 ( fis g a b g b8 ) bes16 \( g bes bes( a) g e8 \) }
+       { e,,16-> fis g a b g b8 \staccato  bes16->  g bes bes->( a) g e8 \staccato }
 
      % measure 6f,9u
        { \times 2/3 { e16-> b'-\staccato e\staccato} e,8 -\staccato e-> e-\staccato e-> fis-\staccato g-> gis-\staccato  }
@@ -27,7 +27,7 @@ JJNotes = \relative c'' {
       \autoBeamOn
 
      % measure 8f,11u
-      ais4^\markup { \teeny poco vib. } )  \prall \stemNeutral \slurNeutral \times 2/3 {c8 \( (ais) g} f'8 e d e16 d 
+      ais4 )  \prall \stemNeutral \slurNeutral \times 2/3 {c8 \( (ais) g} f'8 e d e16 d 
 
      % measure 9f,12u
       \afterGrace c8 \) \glissando e, \slurUp \stemDown \grace f, \glissando ( a cis ) \slurUp \stemDown \grace ais \glissando ( cis e ) \slurUp \stemDown \grace cis \glissando ( e g ) \slurUp \stemDown \grace e \glissando ( g 

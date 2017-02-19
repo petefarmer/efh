@@ -45,7 +45,7 @@ wr-tab = \relative c'' {
 
       % measure 14f,
       \bendOn
-      e8 g c \grace dis (e8) dis ~ dis4.
+      e8\3 g\2 c \grace dis (e8) dis ~ dis4.
       \bendOff
 
      }

@@ -1,7 +1,8 @@
 \version "2.18.0"
+\version "2.18.0"
 \include "bend.ly"
 %\include "articulate.ly"
-\include "rhyMark.ly" 
+%\include "rhyMark.ly" 
 \include "ig-intro-rests.ly"
 \include "JJ.ly"
 \include "JD.ly"
@@ -16,50 +17,73 @@
 
 \pointAndClickOff 
 
-
-\version "2.16.0"
-
 TimeKey = { \time 4/4 \key e \minor }
 
 global = {
  \TimeKey
- \rhythmMarkC #'"Allegro" \rhyMarkIIEighths \rhyMarkSlurredTriplets 
+%\tempo "Allegro"
+% \rhythmMarkC #'"Allegro" \rhyMarkIIEighths \rhyMarkSlurredTriplets 
 }
 \paper {
- #(set-paper-size "a4" )
+% #(set-paper-size "arch e" )
+ #(set-paper-size "jorgenson" )
 % annotate-spacing = ##t
 
 }
 
 \book {
+% #(set-global-staff-size 20)
  \header {
   title = "Inspector Gadget"
   subtitle = "DRAFT"
-  subsubtitle = "v0.5"
-  composer = "John Jorgenson"
   copyright = \markup { \char ##x00A9 Copyright Jorgensongs 2012 }
+  subsubtitle = "v0.6"
+  composer = "John Jorgenson"
  }
 
 \score {
-% \unfoldRepeats
+%  \unfoldRepeats
 % \articulate
  \new StaffGroup <<
 % \new ChordNames { \Chords }
 
-  \new Staff << \set Staff.instrumentName = #"Guitar 1" 
-                \tempo 4 = 120
+  \new Staff 
+
+  \with {
+  \override VerticalAxisGroup.staff-staff-spacing =
+      #'((basic-distance . 10)
+         (minimum-distance . 10)
+         (padding . 1)
+         (stretchability . 10))
+                           
+  }
+  << \set Staff.instrumentName = #"Guitar 1" 
+%                \tempo 4 = 120
                 \global
                 \JJNotes 
+
              >>
   \new TabStaff <<
                  \new TabVoice \with { \revert TextScript #'stencil }
                  \jj-tab
                 >>
 
-  \new Staff << \set Staff.instrumentName = #"Guitar 2" 
-%                \tempo 4 = 120
+  \new Staff 
+  
+  \with {
+  
+  \override VerticalAxisGroup.staff-staff-spacing =
+      #'((basic-distance . 10)
+         (minimum-distance . 10)
+         (padding . 1)
+         (stretchability . 10))
+                           
+  }
+  << \set Staff.instrumentName = #"Guitar 2" 
                 \global
 %		#{remove-grace-property 'Voice 'Stem 'Beam)
+
+  %\override StaffGrouper.staff-staff-spacing.padding = #5
                 \JDNotes 
              >>
   \new TabStaff <<
@@ -67,7 +91,18 @@ global = {
                 >>
 		
 
-  \new Staff << \set Staff.instrumentName = #"Guitar 3" 
+  \new Staff 
+  
+  \with {
+  
+  \override VerticalAxisGroup.staff-staff-spacing =
+      #'((basic-distance . 10)
+         (minimum-distance . 10)
+         (padding . 1)
+         (stretchability . 10))
+                           
+  }
+  << \set Staff.instrumentName = #"Guitar 3" 
 %                \tempo 4 = 120
                 \global
                 \WRNotes 
@@ -94,12 +129,19 @@ global = {
 
 
  >>
+
  \layout {
   \context {
    \Staff \RemoveEmptyStaves
 %     \override Glissando #'style = #'zigzag
 %     \override Glissando #'style = #'trill
 %     \override Glissando #'(bound-details right Y) = #-2
+
+  %\override VerticalAxisGroup.default-staff-staff-spacing =
+  %    #'((basic-distance . 12)
+  %       (minimum-distance . 12)
+  %       (padding . 1)
+  %       (stretchability . 10))
   }
   \context {
    \TabStaff \RemoveEmptyStaves
@@ -113,5 +155,6 @@ global = {
   }
   \override Score.MetronomeMark #'direction = #DOWN
  }
+%\midi {}
 } % score
 } % book

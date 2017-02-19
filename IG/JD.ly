@@ -1,5 +1,5 @@
-JDNotes = \relative c'' {
-     \clef "treble_8"
+JDNotes = \relative c''' {
+     \clef "treble"
 % anacrusis
 %\partial 8 r8
 % Fig. 1 begin
@@ -7,7 +7,7 @@ JDNotes = \relative c'' {
       \repeat volta 2 {
       % measure 1f,
        \repeat percent 3 {
-       b16 ( ais b8 ) \staccato g16 ( fis g8 ) \staccato g16 \( e g g (e) d c8 \) \staccato
+       b16-> ais b8 \staccato g16->  fis g8  \staccato g16->  e g g-> (e) d c8  \staccato
        }
 %{
       % measure 2f,
@@ -19,7 +19,7 @@ JDNotes = \relative c'' {
       }
       \alternative {
       % measure 5f,
-       { e,16 ( fis g a b g b8 )  bes16 \( g bes bes (a) g e8 \) }
+       { e,16-> fis g a b g b8\staccato   bes16->  g bes bes-> (a) g e8\staccato }
 
       % measure 6f,
 %       { \times 2/3 {e16-> e'-\staccato  b-\staccato } e,8 -\staccato e-> e-\staccato  \times 2/3 { e16-> b'-\staccato e-\staccato}  fis,8-\staccato g-> gis-\staccato } 
@@ -28,18 +28,20 @@ JDNotes = \relative c'' {
        { 
        
         e'8  e, e e'  e, fis g gis 
-       \mark \markup {
-       \box
-       \pad-markup #1
-        \score {
-         \relative c' {
-	 \mark \markup { \teeny \bold "Gtr. 2 before Fig. 2" }
-          b''16 ( ais b8 ) \staccato g16 ( fis g8 ) \staccato g16 e g g   (e) c d dis 
-          e8  e, e e'  e, fis g gis 
-	 }
-	 \layout { #(layout-set-staff-size 15) }
-	}
-       }
+   
+%   \mark \markup {
+   %    \box
+%      \pad-markup #1
+  %     \score {
+    %    \relative c' {
+%	 \mark \markup { \teeny \bold "Gtr. 2 before Fig. 2" }
+  %       b''16 ( ais b8 ) \staccato g16 ( fis g8 ) \staccato g16 e g g   (e) c d dis 
+    %     e8  e, e e'  e, fis g gis 
+      %  }
+	% \layout { #(layout-set-staff-size 15) }
+%	}
+ %      }
+       
        } 
 
       }

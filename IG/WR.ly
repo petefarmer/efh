@@ -1,5 +1,5 @@
-WRNotes = \relative c'' {
-     \clef "treble_8"
+WRNotes = \relative c''' {
+     \clef "treble"
      % measure 1f,
 %\partial 8 r8
 % Fig. 1 begin
@@ -8,9 +8,9 @@ WRNotes = \relative c'' {
       % measure 2f,
        \repeat percent 3 {
       \stemDown
-       \ottava #1
+%       \ottava #1
 %       g'16 ( fis g8 ) \staccato  e16 ( dis e8 ) \staccato  e16 \( c e e (c) g e8 \) \staccato
-       g'16 ( fis g8 ) \staccato  e16 ( dis e8 ) \staccato  e16 \( c e e (c) bes g8 \) \staccato
+       g'16->  fis g8  \staccato  e16-> dis e8 \staccato  e16->  c e e-> (c) bes g8 \staccato
       \stemNeutral
        }
 %{
@@ -27,13 +27,13 @@ WRNotes = \relative c'' {
       \stemNeutral
        \ottava #0
 %}
-       \ottava #0
+ %      \ottava #0
       }
       \alternative {
 
       % measure 5f,
-       {  e16^\markup { \italic loco } \( fis g a  b g b8 \) \staccato  bes16 \( g bes bes (a) g e8 \) \staccato }
-
+  %     {  e16^\markup { \italic loco } \( fis g a  b g b8 \) \staccato  bes16 \( g bes bes (a) g e8 \) \staccato }
+     {  e16->  fis g a  b g b8 \staccato  bes16->  g bes bes-> (a) g e8  \staccato }
       % measure 6f,
 %       { \times 2/3 {e,16-> b'-\staccato  e-\staccato } e,8 -\staccato e-> e-\staccato  \times 2/3 { e16-> b'-\staccato e-\staccato}  fis,8-\staccato g-> gis-\staccato } 
        { e,8 e e e  \times 2/3 { e16 b' e }  fis,8 g gis } 

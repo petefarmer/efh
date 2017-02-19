@@ -12,7 +12,7 @@
 % - simplify \preBend and \holdBend usage
 % - ...
 
- #(display "\n\nbend.ly ─ 2011-03-11\n\n")
+#(display "\n\nbend.ly ─ 2011-03-11\n\n")
 
 
 %%% sizes and values (to be changed/adapted):
